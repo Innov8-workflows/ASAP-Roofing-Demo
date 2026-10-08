@@ -1254,6 +1254,9 @@ form{background:var(--card);border:1px solid var(--card-line);border-radius:var(
           </label>
         </div>
         <label class="field"><span>Tell us about the job</span><textarea name="detail" placeholder="What is happening with the roof, and any timescale."></textarea></label>
+
+        <div class="hp-field" aria-hidden="true"><label>Leave this empty<input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+        <style>.hp-field{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}</style>
         <button class="btn btn-primary btn-block" type="submit">
           <svg class="icon" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
           Send via WhatsApp
@@ -1488,6 +1491,7 @@ form{background:var(--card);border:1px solid var(--card-line);border-radius:var(
   document.getElementById("lbPrev").addEventListener("click", function(e){ e.stopPropagation(); openLb(li - 1); });
   document.getElementById("lbNext").addEventListener("click", function(e){ e.stopPropagation(); openLb(li + 1); });
   lb.addEventListener("click", function(e){ if (e.target === lb) closeLb(); });
+
 
 
   var workBuilt = false;
